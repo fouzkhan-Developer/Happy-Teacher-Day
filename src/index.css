@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-cormorant: "Cormorant Garamond", Georgia, serif;
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@keyframes watermarkPulse {
+  0%, 100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.animate-watermark {
+  animation: watermarkPulse 5s ease-in-out infinite;
+}
+
+@keyframes subtleFloatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+.animate-float-slow {
+  animation: subtleFloatSlow 7s ease-in-out infinite;
+}
+
+@keyframes ambientRay {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.08) rotate(2deg);
+  }
+}
+
+.animate-ambient-ray {
+  animation: ambientRay 12s ease-in-out infinite;
+}
+
+/* Glassmorphic border shimmer */
+.gold-glass-panel {
+  background: rgba(14, 23, 47, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.gold-glass-panel:hover {
+  border-color: rgba(212, 175, 55, 0.38);
+}
